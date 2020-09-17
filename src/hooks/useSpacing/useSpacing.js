@@ -35,18 +35,18 @@ const defaultProps = {
 const useSpacing = (props) => {
   const { spacing } = props;
 
-  let margin = 0;
+  let padding = 0;
 
   switch (spacing) {
     case "gutter":
-      margin = "1em";
+      padding = "1em";
       break;
     case "none":
     default:
-      margin = 0;
+      padding = 0;
   }
 
-  return margin;
+  return padding;
 };
 
 useSpacing.propTypes = propTypes;

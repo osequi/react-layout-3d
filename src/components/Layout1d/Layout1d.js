@@ -33,13 +33,24 @@ const defaultProps = {
 const Container = styled(Section)((props) => ({
   width: `${props.width}`,
   height: `${props.height}`,
-  /**
-   * Children are positioned in the container.
-   * They don't set their own surrounding space.
-   * @see https://seek-oss.github.io/braid-design-system/foundations/layout
-   */
+  backgroundColor: "lightgray",
+
   ["& > *"]: {
-    margin: `${props.margin}`,
+    /**
+     * The child is positioned in the container.
+     * The child doesn't set it's own surrounding space.
+     * @see https://seek-oss.github.io/braid-design-system/foundations/layout
+     *
+     * We use padding instead of margin, since the child cannot set it's own padding.
+     * With padding the container can have a decoration. With margin that decoration would be lost.
+     */
+    padding: `${props.padding}`,
+    /**
+     * The child is stretched inside the container to the container's full width and height.
+     */
+    width: "100%",
+    height: "100%",
+    boxSizing: "border-box",
   },
 }));
 
@@ -49,14 +60,14 @@ const Container = styled(Section)((props) => ({
 const Layout1d = (props) => {
   const { width, height, children } = props;
 
-  const margin = useSpacing(props);
+  const padding = useSpacing(props);
 
   return (
     <Container
       className="Layout1d"
       width={width}
       height={height}
-      margin={margin}
+      padding={padding}
     >
       {children}
     </Container>
