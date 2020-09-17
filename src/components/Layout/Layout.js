@@ -1,6 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
+
+/**
+ * Imports other components and hooks
+ */
+import Layout1d from "../Layout1d";
 
 /**
  * Defines the prop types
@@ -21,15 +25,16 @@ const defaultProps = {
 };
 
 /**
- * Styles the component container
- */
-const Container = styled("div")((props) => ({}));
-
-/**
  * Displays the component
  */
 const Layout = (props) => {
-  return <Container className="Layout">Layout</Container>;
+  const { dimension } = props;
+
+  switch (dimension) {
+    case 1:
+    default:
+      return <Layout1d {...props} />;
+  }
 };
 
 Layout.propTypes = propTypes;
