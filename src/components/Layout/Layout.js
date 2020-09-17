@@ -24,17 +24,37 @@ const propTypes = {
    * The width of the layout
    * @type {string}
    */
-  w: PropTypes.string,
+  width: PropTypes.string,
   /**
    * The height of the layout
    * @type {string}
    */
-  h: PropTypes.string,
+  height: PropTypes.string,
   /**
-   * The `<section>` props
+   * The spacing of the element(s) inside the container
+   * @type {array}
+   */
+  spacing: PropTypes.oneOf([
+    "none",
+    "gutter",
+    "xxs",
+    "xs",
+    "s",
+    "m",
+    "l",
+    "xl",
+    "xxl",
+  ]),
+  /**
+   * The `<section>` props. `<section>` servers as the container element of the layout.
    * @type {SectionPropTypes}
    */
   section: PropTypes.shape(SectionPropTypes),
+  /**
+   * The content of the container
+   * @type {any}
+   */
+  children: PropTypes.any,
 };
 
 /**
@@ -42,19 +62,23 @@ const propTypes = {
  */
 const defaultProps = {
   dimension: 1,
-  w: "100%",
-  h: "100%",
+  width: "100%",
+  height: "100%",
+  spacing: "gutter",
   section: { ...SectionDefaultProps, display: false }, // NOTE: make sure Section display is false by default
+  children: null,
 };
 
 /**
  * Displays the component
  */
 const Layout = (props) => {
-  const { dimension } = props;
+  const { dimension, children } = props;
 
-  Section.propTypes = propTypes.section;
-  Section.defaultProps = defaultProps.section;
+  /**
+   * Displays nothing if the content for the layout is missing
+   */
+  if (!children) return null;
 
   switch (dimension) {
     case 1:
@@ -65,6 +89,9 @@ const Layout = (props) => {
 
 Layout.propTypes = propTypes;
 Layout.defaultProps = defaultProps;
+
+Section.propTypes = propTypes.section;
+Section.defaultProps = defaultProps.section;
 
 export default Layout;
 export {

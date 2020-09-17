@@ -38,11 +38,11 @@ const Container = styled(Section)((props) => ({
  * Displays the component
  */
 const Layout1d = (props) => {
-  const { w, h } = props;
+  const { width, height, children } = props;
 
   return (
-    <Container className="Layout1d" width={w} height={h}>
-      Layout1d
+    <Container className="Layout1d" width={width} height={height}>
+      {children}
     </Container>
   );
 };
