@@ -10,6 +10,7 @@ import Section, {
  * Imports other components and hooks
  */
 import Layout1d from "../Layout1d";
+import Layout2d from "../Layout2d";
 import { SpacingPropTypes, SpacingDefaultProps } from "../../hooks";
 
 /**
@@ -72,6 +73,8 @@ const Layout = (props) => {
   if (!children) return null;
 
   switch (dimension) {
+    case 2:
+      return <Layout2d {...props} />;
     case 1:
     default:
       return <Layout1d {...props} />;
