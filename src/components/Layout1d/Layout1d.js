@@ -2,7 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-import Section from "@bit/osequi.test.section";
+import Section, {
+  SectionPropTypes,
+  SectionDefaultProps,
+} from "@bit/osequi.test.section";
 
 /**
  * Imports other components and hooks
@@ -26,9 +29,10 @@ const defaultProps = {
 /**
  * Styles the component container
  */
-const Container = styled("div")((props) => ({}))`
-width: 100%;
-`;
+const Container = styled(Section)((props) => ({
+  width: `${props.width}`,
+  height: `${props.height}`,
+}));
 
 /**
  * Displays the component

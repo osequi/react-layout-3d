@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import {
+import Section, {
   SectionPropTypes,
   SectionDefaultProps,
 } from "@bit/osequi.test.section";
@@ -53,6 +53,9 @@ const defaultProps = {
 const Layout = (props) => {
   const { dimension } = props;
 
+  Section.propTypes = propTypes.section;
+  Section.defaultProps = defaultProps.section;
+
   switch (dimension) {
     case 1:
     default:
@@ -64,4 +67,8 @@ Layout.propTypes = propTypes;
 Layout.defaultProps = defaultProps;
 
 export default Layout;
-export { propTypes as LayoutPropTypes, defaultProps as LayoutDefaultProps };
+export {
+  propTypes as LayoutPropTypes,
+  defaultProps as LayoutDefaultProps,
+  Section,
+};

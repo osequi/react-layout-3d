@@ -1,1 +1,6 @@
-export { default, LayoutPropTypes, LayoutDefaultProps } from "./Layout";
+export {
+  default,
+  LayoutPropTypes,
+  LayoutDefaultProps,
+  Section,
+} from "./Layout";
