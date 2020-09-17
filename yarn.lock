@@ -334,7 +334,7 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@babel/parser@^7.10.4", "@babel/parser@^7.11.1", "@babel/parser@^7.11.5", "@babel/parser@^7.7.7", "@babel/parser@^7.9.6":
+"@babel/parser@^7.10.4", "@babel/parser@^7.11.1", "@babel/parser@^7.11.2", "@babel/parser@^7.11.5", "@babel/parser@^7.7.7", "@babel/parser@^7.9.6":
   version "7.11.5"
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.11.5.tgz#c7ff6303df71080ec7a4f5b8c003c58f1cf51037"
 
@@ -1015,6 +1015,82 @@
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@base2/pretty-print-object/-/pretty-print-object-1.0.0.tgz#860ce718b0b73f4009e153541faff2cb6b85d047"
 
+"@bit/osequi.test.article@0.1.0":
+  version "0.1.0"
+  resolved "https://node.bit.dev/osequi.test.article/-/osequi.test.article-0.1.0.tgz#0deda7bd64358b7f8cb0975534aa1716ba207dbd"
+  dependencies:
+    "@bit/osequi.test.headings" "0.1.0"
+    "@bit/osequi.test.react-semantic-elements" "0.1.0"
+    prop-types "15.7.2"
+    react "16.13.1"
+
+"@bit/osequi.test.aside@0.1.0":
+  version "0.1.0"
+  resolved "https://node.bit.dev/osequi.test.aside/-/osequi.test.aside-0.1.0.tgz#63b04de39e5970a6ded64a477097efcd4368697c"
+  dependencies:
+    "@bit/osequi.test.headings" "0.1.0"
+    "@bit/osequi.test.react-semantic-elements" "0.1.0"
+    prop-types "15.7.2"
+    react "16.13.1"
+
+"@bit/osequi.test.footer@0.1.0":
+  version "0.1.0"
+  resolved "https://node.bit.dev/osequi.test.footer/-/osequi.test.footer-0.1.0.tgz#6aa39e06ffb33bac85e353db90ab5b945e3522e3"
+  dependencies:
+    "@bit/osequi.test.headings" "0.1.0"
+    "@bit/osequi.test.react-semantic-elements" "0.1.0"
+    prop-types "15.7.2"
+    react "16.13.1"
+
+"@bit/osequi.test.header@0.1.0":
+  version "0.1.0"
+  resolved "https://node.bit.dev/osequi.test.header/-/osequi.test.header-0.1.0.tgz#ced37d074fbca80c7bb4a0b18b45a56fdeb27e53"
+  dependencies:
+    "@bit/osequi.test.headings" "0.1.0"
+    "@bit/osequi.test.react-semantic-elements" "0.1.0"
+    prop-types "15.7.2"
+    react "16.13.1"
+
+"@bit/osequi.test.headings@0.1.0":
+  version "0.1.0"
+  resolved "https://node.bit.dev/osequi.test.headings/-/osequi.test.headings-0.1.0.tgz#e1fdd68bb9a0d97eca4b23f60cf27f88f93b6282"
+  dependencies:
+    prop-types "15.7.2"
+    react "16.13.1"
+
+"@bit/osequi.test.nav@0.1.0":
+  version "0.1.0"
+  resolved "https://node.bit.dev/osequi.test.nav/-/osequi.test.nav-0.1.0.tgz#e8e747758c05002c72c8c4f5cf54f50ad033d983"
+  dependencies:
+    "@bit/osequi.test.headings" "0.1.0"
+    "@bit/osequi.test.react-semantic-elements" "0.1.0"
+    prop-types "15.7.2"
+    react "16.13.1"
+
+"@bit/osequi.test.react-semantic-elements@0.1.0":
+  version "0.1.0"
+  resolved "https://node.bit.dev/osequi.test.react-semantic-elements/-/osequi.test.react-semantic-elements-0.1.0.tgz#22ba1ef6606b9175bfe4088bc0d7afb888d880ab"
+  dependencies:
+    "@bit/osequi.test.article" "0.1.0"
+    "@bit/osequi.test.aside" "0.1.0"
+    "@bit/osequi.test.footer" "0.1.0"
+    "@bit/osequi.test.header" "0.1.0"
+    "@bit/osequi.test.headings" "0.1.0"
+    "@bit/osequi.test.nav" "0.1.0"
+    "@bit/osequi.test.section" "0.1.0"
+    lodash "^4.17.20"
+    prop-types "15.7.2"
+    react "16.13.1"
+
+"@bit/osequi.test.section@0.1.0", "@bit/osequi.test.section@^0.1.0":
+  version "0.1.0"
+  resolved "https://node.bit.dev/osequi.test.section/-/osequi.test.section-0.1.0.tgz#a0fec8f6e8a2f6bd90995ee5ec54c12372429b8c"
+  dependencies:
+    "@bit/osequi.test.headings" "0.1.0"
+    "@bit/osequi.test.react-semantic-elements" "0.1.0"
+    prop-types "15.7.2"
+    react "16.13.1"
+
 "@cnakazawa/watch@^1.0.3":
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/@cnakazawa/watch/-/watch-1.0.4.tgz#f864ae85004d0fcab6f50be9141c4da368d1656a"
@@ -1405,7 +1481,7 @@
     prop-types "^15.7.2"
     regenerator-runtime "^0.13.3"
 
-"@storybook/addons@6.0.21":
+"@storybook/addons@6.0.21", "@storybook/addons@^6.0.16":
   version "6.0.21"
   resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-6.0.21.tgz#bd5229652102c3aed59b78ef6920ff6b482b4d78"
   dependencies:
@@ -1419,7 +1495,7 @@
     global "^4.3.2"
     regenerator-runtime "^0.13.3"
 
-"@storybook/api@6.0.21":
+"@storybook/api@6.0.21", "@storybook/api@^6.0.16":
   version "6.0.21"
   resolved "https://registry.yarnpkg.com/@storybook/api/-/api-6.0.21.tgz#a25a1eb4d07dc43500e03c856db43baba46726f1"
   dependencies:
@@ -1493,7 +1569,7 @@
     core-js "^3.0.1"
     global "^4.3.2"
 
-"@storybook/components@6.0.21":
+"@storybook/components@6.0.21", "@storybook/components@^6.0.16":
   version "6.0.21"
   resolved "https://registry.yarnpkg.com/@storybook/components/-/components-6.0.21.tgz#2f355370f993e0b7b9062094a03dffc2cdda91db"
   dependencies:
@@ -2199,6 +2275,18 @@
     strip-ansi "^4.0.0"
     text-table "^0.2.0"
     webpack-log "^1.1.2"
+
+"@whitespace/storybook-addon-html@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@whitespace/storybook-addon-html/-/storybook-addon-html-2.0.1.tgz#e17f8f5b11310f1d030d7a69c0eb593c5b3b837a"
+  dependencies:
+    "@babel/generator" "^7.11.0"
+    "@babel/parser" "^7.11.2"
+    "@storybook/addons" "^6.0.16"
+    "@storybook/api" "^6.0.16"
+    "@storybook/components" "^6.0.16"
+    prettier "^2.0.5"
+    react-syntax-highlighter "^12.0.0"
 
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"
@@ -5932,7 +6020,7 @@ lodash.uniq@4.5.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
 
-lodash@^4.0.1, lodash@^4.17.11, lodash@^4.17.13, lodash@^4.17.15, lodash@^4.17.19:
+lodash@^4.0.1, lodash@^4.17.11, lodash@^4.17.13, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.20:
   version "4.17.20"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.20.tgz#b44a9b6297bcb698f1c51a3545a2b3b368d59c52"
 
@@ -7041,7 +7129,7 @@ prettier@1.5.3:
   version "1.5.3"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.5.3.tgz#59dadc683345ec6b88f88b94ed4ae7e1da394bfe"
 
-prettier@^2.1.2:
+prettier@^2.0.5, prettier@^2.1.2:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.1.2.tgz#3050700dae2e4c8b67c4c3f666cdb8af405e1ce5"
 
@@ -7404,7 +7492,7 @@ react-sizeme@^2.6.7:
     shallowequal "^1.1.0"
     throttle-debounce "^2.1.0"
 
-react-syntax-highlighter@^12.2.1:
+react-syntax-highlighter@^12.0.0, react-syntax-highlighter@^12.2.1:
   version "12.2.1"
   resolved "https://registry.yarnpkg.com/react-syntax-highlighter/-/react-syntax-highlighter-12.2.1.tgz#14d78352da1c1c3f93c6698b70ec7c706b83493e"
   dependencies:

@@ -1,9 +1,9 @@
 import React from "react";
-import { storiesOf } from "@storybook/react";
-
 import Layout1d from "./Layout1d";
-import description from "./Layout1d.md";
 
-storiesOf("Layout1d", module).add("Overview", () => <Layout1d />, {
-  notes: { markdown: description }
-});
+export default {
+  title: "Componens/Layout1d",
+  component: Layout1d,
+};
+
+export const Default = () => <Layout1d />;
