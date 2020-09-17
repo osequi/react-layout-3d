@@ -10,6 +10,7 @@ import Section, {
  * Imports other components and hooks
  */
 import Layout1d from "../Layout1d";
+import { SpacingPropTypes, SpacingDefaultProps } from "../../hooks";
 
 /**
  * Defines the prop types
@@ -34,17 +35,7 @@ const propTypes = {
    * The spacing of the element(s) inside the container
    * @type {array}
    */
-  spacing: PropTypes.oneOf([
-    "none",
-    "gutter",
-    "xxs",
-    "xs",
-    "s",
-    "m",
-    "l",
-    "xl",
-    "xxl",
-  ]),
+  ...SpacingPropTypes,
   /**
    * The `<section>` props. `<section>` servers as the container element of the layout.
    * @type {SectionPropTypes}
@@ -64,7 +55,7 @@ const defaultProps = {
   dimension: 1,
   width: "100%",
   height: "100%",
-  spacing: "gutter",
+  ...SpacingDefaultProps,
   section: { ...SectionDefaultProps, display: false }, // NOTE: make sure Section display is false by default
   children: null,
 };
