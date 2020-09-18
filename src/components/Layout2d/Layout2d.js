@@ -40,7 +40,12 @@ const propTypes = {
    */
   gap: PropTypes.shape(SpacingPropTypes.spacing),
   /**
-   * The grid alignment. Two string values: the first aligning the columns with `justify-items`; the second aligning rows with `align-items`. Example: 'top left'
+   * The gap lines.
+   * @type {string}
+   */
+  lines: PropTypes.oneOf(["horizontal", "vertical", "both"]),
+  /**
+   * The grid alignment. Two string values: the first aligning the columns with `justify-items`; the second aligning rows with `align-items`. Example: 'start end'
    * @type {string}
    */
   align: PropTypes.string,
@@ -54,6 +59,7 @@ const defaultProps = {
   columns: null,
   rows: null,
   gap: SpacingDefaultProps.spacing,
+  lines: null,
   align: null,
 };
 
