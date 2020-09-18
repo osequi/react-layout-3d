@@ -15,12 +15,14 @@ const defaultProps = {};
 /**
  * Styles the component container
  */
-const Container = styled("div")(props => ({}));
+const Container = styled("div")((props) => ({}));
+
+// NOTE: use `grid` vs `flexbox`: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 
 /**
  * Displays the component
  */
-const Layout2d = props => {
+const Layout2d = (props) => {
   return <Container className="Layout2d">Layout2d</Container>;
 };
 

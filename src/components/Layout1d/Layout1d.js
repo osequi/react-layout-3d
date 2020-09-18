@@ -33,11 +33,10 @@ const defaultProps = {
 const Container = styled(Section)((props) => ({
   width: `${props.width}`,
   height: `${props.height}`,
-  backgroundColor: "lightgray",
 
   ["& > *"]: {
     /**
-     * The child is positioned in the container.
+     * The child is spaced in the container.
      * The child doesn't set it's own surrounding space.
      * @see https://seek-oss.github.io/braid-design-system/foundations/layout
      *
