@@ -10,7 +10,7 @@ import Section, {
  * Imports other components and hooks
  */
 import Layout1d from "../Layout1d";
-import Layout2d from "../Layout2d";
+import Layout2d, { Layout2dPropTypes, Layout2dDefaultProps } from "../Layout2d";
 import { SpacingPropTypes, SpacingDefaultProps } from "../../hooks";
 
 /**
@@ -47,6 +47,11 @@ const propTypes = {
    * @type {any}
    */
   children: PropTypes.any,
+  /**
+   * The proptypes from Layout2d
+   * @type {Object}
+   */
+  ...Layout2dPropTypes,
 };
 
 /**
@@ -59,6 +64,7 @@ const defaultProps = {
   ...SpacingDefaultProps,
   section: { ...SectionDefaultProps, display: false }, // NOTE: make sure Section display is false by default
   children: null,
+  ...Layout2dDefaultProps,
 };
 
 /**
