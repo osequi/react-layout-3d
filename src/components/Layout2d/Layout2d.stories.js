@@ -70,3 +70,11 @@ Gap.args = {
   ...Spacing.args,
   gap: "gutter",
 };
+
+export const Align = Template.bind({});
+Align.args = {
+  ...Gap.args,
+  align: "center center",
+  width: "50vw",
+  height: "50vh",
+};

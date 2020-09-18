@@ -14,6 +14,11 @@ import { LayoutPropTypes, LayoutDefaultProps } from "../Layout";
 import { useSpacing, SpacingPropTypes, SpacingDefaultProps } from "../../hooks";
 
 /**
+ * Imports business logic
+ */
+import { getGridAlignments } from "./Layout2d.logic";
+
+/**
  * Defines the prop types
  */
 const propTypes = {
@@ -34,6 +39,11 @@ const propTypes = {
    * @type {string}
    */
   gap: PropTypes.shape(SpacingPropTypes.spacing),
+  /**
+   * The grid alignment. Two string values: the first aligning the columns with `justify-items`; the second aligning rows with `align-items`. Example: 'top left'
+   * @type {string}
+   */
+  align: PropTypes.string,
 };
 
 /**
@@ -44,6 +54,7 @@ const defaultProps = {
   columns: null,
   rows: null,
   gap: SpacingDefaultProps.spacing,
+  align: null,
 };
 
 /**
@@ -57,6 +68,8 @@ const Container = styled(Section)((props) => ({
   gridTemplateRows: `${props.rows}`,
   columnGap: `${props.gap}`,
   rowGap: `${props.gap}`,
+  alignItems: `${props.alignItems}`,
+  justifyItems: `${props.justifyItems}`,
   padding: `${props.spacing}`,
 }));
 
@@ -68,6 +81,7 @@ const Layout2d = (props) => {
 
   const spacing = useSpacing(props);
   const gap = useSpacing({ spacing: rawGap });
+  const { alignItems, justifyItems } = getGridAlignments(props);
 
   return (
     <Container
@@ -78,6 +92,8 @@ const Layout2d = (props) => {
       rows={rows}
       spacing={spacing}
       gap={gap}
+      alignItems={alignItems}
+      justifyItems={justifyItems}
     >
       {children}
     </Container>
