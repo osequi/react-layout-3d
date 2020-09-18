@@ -43,12 +43,15 @@ const Container = styled(Section)((props) => ({
      * We use padding instead of margin, since the child cannot set it's own padding.
      * With padding the container can have a decoration. With margin that decoration would be lost.
      */
-    padding: `${props.padding}`,
+    padding: `${props.spacing}`,
     /**
      * The child is stretched inside the container to the container's full width and height.
      */
     width: "100%",
     height: "100%",
+    /**
+     * Used to make sure the padding doesn't overflows the container.
+     */
     boxSizing: "border-box",
   },
 }));
@@ -59,14 +62,14 @@ const Container = styled(Section)((props) => ({
 const Layout1d = (props) => {
   const { width, height, children } = props;
 
-  const padding = useSpacing(props);
+  const spacing = useSpacing(props);
 
   return (
     <Container
       className="Layout1d"
       width={width}
       height={height}
-      padding={padding}
+      spacing={spacing}
     >
       {children}
     </Container>

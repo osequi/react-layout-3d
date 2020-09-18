@@ -38,8 +38,35 @@ WithChildren.args = {
   ),
 };
 
-export const ColumnSet = Template.bind({});
-ColumnSet.args = {
+export const Columns = Template.bind({});
+Columns.args = {
   ...WithChildren.args,
   columns: "1fr 1fr",
+};
+
+export const Rows = Template.bind({});
+Rows.args = {
+  ...WithChildren.args,
+  rows: "1fr 1fr",
+};
+
+export const Spacing = Template.bind({});
+Spacing.args = {
+  children: (
+    <>
+      {Article}
+      {Article}
+      {Article}
+      {Article}
+    </>
+  ),
+  columns: "1fr 1fr",
+  rows: "1fr 1fr",
+  spacing: "gutter",
+};
+
+export const Gap = Template.bind({});
+Gap.args = {
+  ...Spacing.args,
+  gap: "gutter",
 };

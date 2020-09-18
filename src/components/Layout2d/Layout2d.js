@@ -11,7 +11,7 @@ import Section, {
  * Imports other components and hooks
  */
 import { LayoutPropTypes, LayoutDefaultProps } from "../Layout";
-import { useSpacing } from "../../hooks";
+import { useSpacing, SpacingPropTypes, SpacingDefaultProps } from "../../hooks";
 
 /**
  * Defines the prop types
@@ -29,6 +29,11 @@ const propTypes = {
    * @type {string}
    */
   rows: PropTypes.string,
+  /**
+   * The gap between the cells. Set both horizontally with `column-gap` and vertically with `row-gap`.
+   * @type {string}
+   */
+  gap: PropTypes.shape(SpacingPropTypes.spacing),
 };
 
 /**
@@ -38,6 +43,7 @@ const defaultProps = {
   ...LayoutDefaultProps,
   columns: null,
   rows: null,
+  gap: SpacingDefaultProps.spacing,
 };
 
 /**
@@ -49,13 +55,19 @@ const Container = styled(Section)((props) => ({
   height: `${props.height}`,
   gridTemplateColumns: `${props.columns}`,
   gridTemplateRows: `${props.rows}`,
+  columnGap: `${props.gap}`,
+  rowGap: `${props.gap}`,
+  padding: `${props.spacing}`,
 }));
 
 /**
  * Displays the component
  */
 const Layout2d = (props) => {
-  const { width, height, children, columns, rows } = props;
+  const { width, height, children, columns, rows, gap: rawGap } = props;
+
+  const spacing = useSpacing(props);
+  const gap = useSpacing({ spacing: rawGap });
 
   return (
     <Container
@@ -64,6 +76,8 @@ const Layout2d = (props) => {
       height={height}
       columns={columns}
       rows={rows}
+      spacing={spacing}
+      gap={gap}
     >
       {children}
     </Container>
